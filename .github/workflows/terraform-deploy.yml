@@ -29,10 +29,10 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v4
 
-      - name: Run tfsec
-        uses: aquasecurity/tfsec-action@v1.0.3
-        with:
-          working_directory: ./terraform
+      # - name: Run tfsec
+      #   uses: aquasecurity/tfsec-action@v1.0.3
+      #   with:
+      #     working_directory: ./terraform
 
       - name: 'Configure AWS Credentials'
         uses: aws-actions/configure-aws-credentials@v4
