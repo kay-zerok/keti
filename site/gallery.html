@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keti | Gallery</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <style>
+    .nav-link:hover {
+      color: #ef4444;
+    }
+    .gallery-img {
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-white font-sans">
+  <!-- Navigation -->
+  <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold">KETI</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="nav-link text-white">Home</a>
+        <a href="products.html" class="nav-link text-white">Products</a>
+        <a href="gallery.html" class="nav-link text-red-500 font-medium">Gallery</a>
+        <a href="about.html" class="nav-link text-white">About Us</a>
+        <a href="contact.html" class="nav-link text-white">Contact Us</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-white hover:text-red-500"><i data-feather="shopping-bag"></i></a>
+        <a href="#" class="text-white hover:text-red-500"><i data-feather="user"></i></a>
+        <button class="md:hidden focus:outline-none" id="menu-toggle">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden bg-black w-full px-6 py-2" id="mobile-menu">
+      <a href="index.html" class="block py-2 text-white hover:text-red-500">Home</a>
+      <a href="products.html" class="block py-2 text-white hover:text-red-500">Products</a>
+      <a href="gallery.html" class="block py-2 text-red-500">Gallery</a>
+      <a href="about.html" class="block py-2 text-white hover:text-red-500">About Us</a>
+      <a href="contact.html" class="block py-2 text-white hover:text-red-500">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-black text-white py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">Our Gallery</h1>
+    <p class="text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      A glimpse into the world of Keti — premium apparel, accessories, and unforgettable moments.
+    </p>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div data-aos="zoom-in"><img src="images/gallery/1.jpg" alt="Gallery 1" class="gallery-img rounded-lg shadow-md w-full h-full object-cover"></div>
+        <div data-aos="zoom-in" data-aos-delay="100"><img src="images/gallery/2.jpg" alt="Gallery 2" class="gallery-img rounded-lg shadow-md w-full h-full object-cover"></div>
+        <div data-aos="zoom-in" data-aos-delay="200"><img src="images/gallery/3.JPG" alt="Gallery 3" class="gallery-img rounded-lg shadow-md w-full h-full object-cover"></div>
+        <div data-aos="zoom-in" data-aos-delay="300"><img src="images/gallery/4.JPG" alt="Gallery 4" class="gallery-img rounded-lg shadow-md w-full h-full object-cover"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal (hidden by default) -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <div class="relative max-w-3xl w-full mx-4">
+      <button id="closeModal" class="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full shadow-lg hover:bg-red-700">
+        ✕
+      </button>
+      <img id="modalImage" src="" alt="Enlarged" class="rounded-lg shadow-lg w-full max-h-[80vh] object-contain">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">KETI</h3>
+          <p class="text-gray-400">Premium apparel for the modern individual.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Shop</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Men</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Women</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Sustainability</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Shipping & Returns</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Store Locator</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400">© <span id="year"></span> Keti. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i data-feather="youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Initialize AOS and Feather Icons
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    feather.replace();
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Gallery modal functionality
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+    const galleryImages = document.querySelectorAll(".gallery-img");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        modalImg.src = img.src;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    });
+
+    // Close modal on outside click
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keti | Products</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .product-hero {
+            background-image: url('http://static.photos/fashion/1200x630/15');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link:hover {
+            color: #ef4444;
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .filter-btn.active {
+            background-color: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">KETI</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-red-500 font-medium">Home</a>
+                <a href="products.html" class="nav-link text-red-500 font-medium">Products</a>
+                <a href="gallery.html" class="nav-link text-white hover:text-red-500 font-medium">Gallery</a>
+                <a href="about.html" class="nav-link text-white hover:text-red-500 font-medium">About Us</a>
+                <a href="contact.html" class="nav-link text-white hover:text-red-500 font-medium">Contact Us</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-white hover:text-red-500"><i data-feather="shopping-bag"></i></a>
+                <a href="#" class="text-white hover:text-red-500"><i data-feather="user"></i></a>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-black w-full px-6 py-2" id="mobile-menu">
+            <a href="index.html" class="block py-2 text-white hover:text-red-500">Home</a>
+            <a href="products.html" class="block py-2 text-red-500">Products</a>
+            <a href="gallery.html" class="block py-2 text-white hover:text-red-500">Gallery</a>
+            <a href="about.html" class="block py-2 text-white hover:text-red-500">About Us</a>
+            <a href="contact.html" class="block py-2 text-white hover:text-red-500">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="product-hero min-h-[40vh] flex items-center text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl bg-black bg-opacity-70 p-8 rounded-lg" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Collections</h1>
+                <p class="text-lg">Discover premium apparel designed for every occasion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Filter -->
+    <section class="py-8 bg-gray-100 sticky top-16 z-40 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="filter-btn px-4 py-2 rounded-full bg-white text-black border border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-white text-black border border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500" data-filter="men">Men</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-white text-black border border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500" data-filter="women">Women</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-white text-black border border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500" data-filter="accessories">Accessories</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-white text-black border border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500" data-filter="new">New Arrivals</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-white text-black border border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500" data-filter="sale">Sale</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="men new" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="http://static.photos/fashion/640x360/20" alt="Men's Shirt" class="w-full h-80 object-cover">
+                        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Classic Oxford Shirt</h3>
+                        <p class="text-gray-600 text-sm mb-2">Men's Collection</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">R599</span>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="women" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/fashion/640x360/21" alt="Women's Dress" class="w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Elegance Wrap Dress</h3>
+                        <p class="text-gray-600 text-sm mb-2">Women's Collection</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">R899</span>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="accessories" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/fashion/640x360/22" alt="Leather Belt" class="w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Genuine Leather Belt</h3>
+                        <p class="text-gray-600 text-sm mb-2">Accessories</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">R399</span>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="men" data-aos="fade-up" data-aos-delay="300">
+                    <img src="http://static.photos/fashion/640x360/23" alt="Men's Jeans" class="w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Slim Fit Jeans</h3>
+                        <p class="text-gray-600 text-sm mb-2">Men's Collection</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">R799</span>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="women new" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="http://static.photos/fashion/640x360/24" alt="Women's Blouse" class="w-full h-80 object-cover">
+                        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Silk Button-Up Blouse</h3>
+                        <p class="text-gray-600 text-sm mb-2">Women's Collection</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">R699</span>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="accessories" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/fashion/640x360/25" alt="Scarf" class="w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Cashmere Scarf</h3>
+                        <p class="text-gray-600 text-sm mb-2">Accessories</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">R499</span>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="men sale" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="http://static.photos/fashion/640x360/26" alt="Men's Jacket" class="w-full h-80 object-cover">
+                        <span class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 rounded-full">SALE</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Bomber Jacket</h3>
+                        <p class="text-gray-600 text-sm mb-2">Men's Collection</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-red-500">R999</span>
+                                <span class="text-gray-400 text-sm line-through ml-2">R1299</span>
+                            </div>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md" data-category="women sale" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="http://static.photos/fashion/640x360/27" alt="Women's Skirt" class="w-full h-80 object-cover">
+                        <span class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 rounded-full">SALE</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-1">Midi Pleated Skirt</h3>
+                        <p class="text-gray-600 text-sm mb-2">Women's Collection</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-red-500">R749</span>
+                                <span class="text-gray-400 text-sm line-through ml-2">R999</span>
+                            </div>
+                            <button class="text-red-500 hover:text-red-700">
+                                <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12" data-aos="fade-up">
+                <nav class="flex items-center space-x-2">
+                    <button class="px-4 py-2 border border-gray-300 rounded-l-lg hover:bg-gray-100">
+                        <i data-feather="chevron-left"></i>
+                    </button>
+                    <button class="px-4 py-2 border border-gray-300 bg-red-500 text-white">1</button>
+                    <button class="px-4 py-2 border border-gray-300 hover:bg-gray-100">2</button>
+                    <button class="px-4 py-2 border border-gray-300 hover:bg-gray-100">3</button>
+                    <button class="px-4 py-2 border border-gray-300 rounded-r-lg hover:bg-gray-100">
+                        <i data-feather="chevron-right"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-red-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Stay Updated</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-lg" data-aos="fade-up" data-aos-delay="100">
+                Subscribe to our newsletter for exclusive offers, new arrivals, and style inspiration.
+            </p>
+            <div class="max-w-md mx-auto flex" data-aos="fade-up" data-aos-delay="200">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-black">
+                <button class="bg-black px-6 py-3 rounded-r-lg font-medium">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">KETI</h3>
+                    <p class="text-gray-400">Premium apparel for the modern individual.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Men</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Women</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sustainability</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© <span id="year"></span> Keti. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Product filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Initialize AOS and Feather Icons
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();	
+		
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>

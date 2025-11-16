@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keti | About Us</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .about-hero {
+            background-image: url('http://static.photos/workspace/1200x630/10');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link:hover {
+            color: #ef4444;
+        }
+        .value-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">KETI</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-red-500 font-medium">Home</a>
+                <a href="products.html" class="nav-link text-white hover:text-red-500 font-medium">Products</a>
+                <a href="gallery.html" class="nav-link text-white hover:text-red-500 font-medium">Gallery</a>
+                <a href="about.html" class="nav-link text-red-500 font-medium">About Us</a>
+                <a href="contact.html" class="nav-link text-white hover:text-red-500 font-medium">Contact Us</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-white hover:text-red-500"><i data-feather="shopping-bag"></i></a>
+                <a href="#" class="text-white hover:text-red-500"><i data-feather="user"></i></a>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-black w-full px-6 py-2" id="mobile-menu">
+            <a href="index.html" class="block py-2 text-white hover:text-red-500">Home</a>
+            <a href="products.html" class="block py-2 text-white hover:text-red-500">Products</a>
+			<a href="gallery.html" class="block py-2 text-white hover:text-red-500">Gallery</a>
+            <a href="about.html" class="block py-2 text-red-500">About Us</a>
+            <a href="contact.html" class="block py-2 text-white hover:text-red-500">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero min-h-[50vh] flex items-center text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl bg-black bg-opacity-70 p-8 rounded-lg" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Story</h1>
+                <p class="text-lg">Discover the passion and craftsmanship behind Keti.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-6">Redefining Fashion Since 2008</h2>
+                <p class="text-lg text-gray-600">
+                    Keti was born from a simple idea: to create high-quality, stylish apparel that stands the test of time. 
+                    What started as a small boutique in Pretoria has grown into a beloved brand across South Africa, 
+                    known for our commitment to quality, sustainability, and timeless design.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                <div data-aos="fade-right">
+                    <img src="http://static.photos/workspace/640x360/5" alt="Our Workshop" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Our Craftsmanship</h3>
+                    <p class="text-gray-600 mb-4">
+                        Every Keti garment is crafted with meticulous attention to detail. Our team of skilled artisans 
+                        combines traditional techniques with modern innovation to create pieces that are both beautiful and durable.
+                    </p>
+                    <p class="text-gray-600">
+                        We source only the finest materials, ensuring each piece feels as good as it looks. From the stitching 
+                        to the finishing touches, quality is never compromised.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4">Sustainable Practices</h3>
+                    <p class="text-gray-600 mb-4">
+                        At Keti, we believe fashion should be both stylish and sustainable. We're committed to reducing our 
+                        environmental impact through responsible sourcing, ethical production, and long-lasting designs.
+                    </p>
+                    <p class="text-gray-600">
+                        Our sustainability initiatives include using organic cotton, reducing water consumption in production, 
+                        and implementing a recycling program for old garments.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2" data-aos="fade-left">
+                    <img src="http://static.photos/nature/640x360/7" alt="Sustainable Materials" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="value-card bg-white p-8 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="award" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Quality</h3>
+                    <p class="text-gray-600">
+                        We never compromise on quality. Every stitch, every fabric, every detail is carefully considered to ensure excellence.
+                    </p>
+                </div>
+                <div class="value-card bg-white p-8 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="heart" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Sustainability</h3>
+                    <p class="text-gray-600">
+                        We're committed to ethical practices that respect both people and the planet throughout our supply chain.
+                    </p>
+                </div>
+                <div class="value-card bg-white p-8 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="users" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Community</h3>
+                    <p class="text-gray-600">
+                        We believe in giving back and supporting the communities that make our business possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Meet Our Founders</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/ketiboy.jpg" alt="Keti Boy" class="w-48 h-48 rounded-full object-cover mb-4 shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">Keti Boy</h3>
+                    <p class="text-red-500 mb-2">Co-Founder, CEO & Creative Director</p>
+                    <p class="text-gray-600">
+                        With a background in fashion design, Keti Boy brings creative vision and an eye for detail to every collection.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/ketiboy2.jpg" alt="Keti Boy2" class="w-48 h-48 rounded-full object-cover mb-4 shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">Keti Boy2</h3>
+                    <p class="text-red-500 mb-2">Co-Founder, CEO & Creative Director</p>
+                    <p class="text-gray-600">
+                        With a background in fashion design, Keti Boy brings creative vision and an eye for detail to every collection.
+                    </p>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">KETI</h3>
+                    <p class="text-gray-400">Premium apparel for the modern individual.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Men</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Women</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sustainability</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© <span id="year"></span> Keti. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize AOS and Feather Icons
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+		
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>
